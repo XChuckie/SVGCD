@@ -1,0 +1,1 @@
+from .svgcd import SVGCD

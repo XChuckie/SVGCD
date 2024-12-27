@@ -1,0 +1,58 @@
+dataset: "assist-0910"
+traintmp_cfg_dict:
+  cls: "SVGCDInterTrainTmp"
+  device: "cuda:0"
+  seed: 2024
+  epoch_num: 100
+  batch_size: 1024
+  eval_batch_size: 512
+  num_workers: 0
+  optim: "adam"
+  lr: 0.0001
+  eps: 1.0e-8
+  weight_decay: 0.0
+  ignore_bc_metrics:
+    - auc
+    - rmse
+    - acc
+  ignore_cd_metrics:
+    - doa_all
+    - doa_train_val
+    - doa_test
+  num_stop_rounds: 2
+  early_stop_metrics:
+    - - auc
+      - max
+  best_epoch_metric: "auc"
+  unsave_best_epoch_pth: true
+
+datatmp_cfg_dict:
+  cls: "SVGCDInterDataTmp"
+  is_dataset_divided: true
+  seperator: ","
+
+model_cfg_dict:
+  cls: "SVGCD"
+  param_init_type: "xavier_normal"
+  emb_dim: 128
+  dnn_units:
+    - 256
+    - 128
+  dropout_rate: 0.5
+  n_gnn_layer: 2
+  reg_weight: 1.0e-5
+  dp_type: vgae
+  cl_tau: 0.7
+  cl_weight: 0.5
+  beta: 0.4
+
+evaltmp_cfg_dict:
+  clses:
+    - BinaryClassificationEvalTmp
+  use_metrics:
+    - auc
+    - rmse
+    - acc
+    - doa_all
+  test_only_metrics:
+    - doa_all
