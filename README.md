@@ -29,6 +29,7 @@ python run.py
 Notice
 ------
 * Experimental results reported in the paper are based on Pytorch framework on a GeForce RTX 3090 GPU.
+* You can modify the parameters in the **`location(./confs/exMatCons/assist-0910/scgnn.yaml)`** directly
 * To our credit, our code is a generalized framework that can support multiple datasets and algorithms. If interested, you can deeply analyze the implementation of each part of the code. 
 
 Citation
