@@ -36,10 +36,10 @@ Citation
 --------
 If you find this useful for your research, please kindly cite the following paper:<be>
 ```
-@article{SVGCD2025,
+@inproceedings{xia2025semantic,
   title={Semantic-tailored Variational-Contrastive Graph Learning for Cognitive Diagnosis},
-  author={Chenao Xia, Fei Liu, Zihan Wang, Zhuangzhuang He, Pengyang Shao, Haowei Zhou, and Yonghui Yang}
-  jconference={Companion Proceedings of the ACM Web Conference 2025},
+  author={Xia, Chenao and Liu, Fei and Wang, Zihan and He, Zhuangzhuang and Shao, Pengyang and Zhou, Haowei and Yang, Yonghui}
+  booktitle={The First International Workshop on Transformative Insights in Multifaceted Evaluation at The Web Conference 2025},
   year={2025}
 }
 ```
